@@ -1,6 +1,6 @@
 import React, { useState, useCallback } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { connectSocket, getSocket } from '@/lib/socket';
+import { connectSocket } from '@/lib/socket';
 import { usePartyStore } from '@/stores/partyStore';
 import { useAuthStore, AVATARS } from '@/stores/authStore';
 import styles from './Lobby.module.scss';
@@ -20,7 +20,7 @@ const Lobby: React.FC = () => {
   const [localError, setLocalError] = useState('');
 
   const { setRoomCode, setIsConnecting, setError, error } = usePartyStore();
-  const { username, avatar, setUsername, setAvatar } = useAuthStore();
+  const { username, setUsername, setAvatar } = useAuthStore();
 
   const handleCreate = useCallback(() => {
     const uname = inputUsername.trim() || username;

@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { usePartyStore } from '@/stores/partyStore';
-import { useAuthStore } from '@/stores/authStore';
 import { useChatStore } from '@/stores/chatStore';
 import { usePartySocket } from '@/hooks/usePartySocket';
 import PlayerList from '@/components/PlayerList/PlayerList';
@@ -12,7 +11,7 @@ import styles from './PartyLobby.module.scss';
 const PartyLobby: React.FC = () => {
   const navigate = useNavigate();
   const { roomCode, players, isLeader, currentPlayerId, error } = usePartyStore();
-  const { username } = useAuthStore();
+
   const { leaveParty } = usePartySocket();
   const { messages } = useChatStore();
   const [showChat, setShowChat] = useState(false);

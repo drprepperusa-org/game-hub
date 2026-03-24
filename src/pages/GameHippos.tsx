@@ -52,12 +52,6 @@ const GameHippos: React.FC = () => {
     setLocalHippos(prev => prev.filter(h => h.id !== hippoId));
   }, [tapHippo]);
 
-  const myRank = players.length > 0
-    ? Object.entries(playerScores)
-        .sort(([, a], [, b]) => b - a)
-        .findIndex(([id]) => id === socketId) + 1
-    : 1;
-
   return (
     <div className={styles.container}>
       <div className={styles.topBar}>

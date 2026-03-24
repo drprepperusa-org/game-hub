@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { BrowserRouter, Routes, Route, Navigate, useLocation } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { connectSocket } from '@/lib/socket';
 import { usePartySocket } from '@/hooks/usePartySocket';
 import Lobby from '@/pages/Lobby';
