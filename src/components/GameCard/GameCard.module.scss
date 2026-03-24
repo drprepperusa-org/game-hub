@@ -1,0 +1,118 @@
+@import '@/styles/variables.scss';
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+  background: var(--color-bg-card);
+  border: 2px solid var(--border-color);
+  border-radius: var(--border-radius-xl);
+  padding: var(--spacing-xl);
+  cursor: pointer;
+  transition: all var(--transition-base);
+  text-align: left;
+  position: relative;
+  overflow: hidden;
+  font-family: var(--font-body);
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: var(--accent-color, var(--color-primary));
+    transform: scaleX(0);
+    transition: transform var(--transition-base);
+    transform-origin: left;
+  }
+
+  &:hover {
+    border-color: var(--accent-color, var(--color-primary));
+    transform: translateY(-6px) scale(1.01);
+    box-shadow: var(--shadow-lg), 0 0 30px rgba(108, 99, 255, 0.15);
+
+    &::before { transform: scaleX(1); }
+
+    .playButton {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    .icon {
+      transform: scale(1.15) rotate(5deg);
+    }
+  }
+
+  &:active {
+    transform: translateY(-2px) scale(0.99);
+  }
+}
+
+.iconWrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: var(--border-radius-lg);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.icon {
+  font-size: 36px;
+  transition: transform var(--transition-base);
+  display: block;
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+  flex: 1;
+}
+
+.name {
+  font-size: var(--font-size-xl);
+  font-weight: 900;
+  color: var(--color-text);
+}
+
+.desc {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+  line-height: 1.5;
+}
+
+.meta {
+  display: flex;
+  gap: var(--spacing-sm);
+  flex-wrap: wrap;
+  margin-top: var(--spacing-xs);
+}
+
+.metaItem {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+  font-weight: 700;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: var(--border-radius-xl);
+  padding: 2px var(--spacing-sm);
+}
+
+.difficulty {
+  color: var(--accent-color, var(--color-primary));
+  background: rgba(108, 99, 255, 0.1);
+}
+
+.playButton {
+  font-size: var(--font-size-sm);
+  font-weight: 800;
+  color: var(--accent-color, var(--color-primary));
+  opacity: 0;
+  transform: translateX(-8px);
+  transition: all var(--transition-base);
+  align-self: flex-end;
+}

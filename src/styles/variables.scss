@@ -1,0 +1,86 @@
+// Color palette
+:root {
+  // Primary brand
+  --color-primary: #6c63ff;
+  --color-primary-dark: #5046e5;
+  --color-primary-light: #8b83ff;
+
+  // Secondary
+  --color-secondary: #ff6584;
+  --color-secondary-dark: #e54d6b;
+  --color-secondary-light: #ff8fa3;
+
+  // Accents
+  --color-accent-yellow: #ffd700;
+  --color-accent-green: #44d9a0;
+  --color-accent-orange: #ff8c42;
+  --color-accent-pink: #ff6584;
+  --color-accent-blue: #4ecdc4;
+
+  // Background
+  --color-bg: #0f0e17;
+  --color-bg-card: #1a1928;
+  --color-bg-elevated: #252436;
+  --color-bg-input: #2d2c3e;
+
+  // Text
+  --color-text: #fffffe;
+  --color-text-secondary: #a7a9be;
+  --color-text-muted: #6b6c7e;
+
+  // Status
+  --color-success: #44d9a0;
+  --color-error: #ff6584;
+  --color-warning: #ffd700;
+  --color-info: #4ecdc4;
+
+  // Gradients
+  --gradient-primary: linear-gradient(135deg, #6c63ff 0%, #ff6584 100%);
+  --gradient-game: linear-gradient(135deg, #1a1928 0%, #252436 100%);
+  --gradient-hero: linear-gradient(135deg, #0f0e17 0%, #1a1928 50%, #252436 100%);
+
+  // Shadows
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 20px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 8px 40px rgba(0, 0, 0, 0.5);
+  --shadow-glow: 0 0 20px rgba(108, 99, 255, 0.4);
+  --shadow-glow-pink: 0 0 20px rgba(255, 101, 132, 0.4);
+
+  // Borders
+  --border-radius-sm: 8px;
+  --border-radius-md: 12px;
+  --border-radius-lg: 20px;
+  --border-radius-xl: 32px;
+  --border-color: rgba(255, 255, 255, 0.08);
+
+  // Spacing
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 40px;
+  --spacing-2xl: 64px;
+
+  // Typography
+  --font-display: 'Press Start 2P', monospace;
+  --font-body: 'Nunito', sans-serif;
+  --font-size-xs: 11px;
+  --font-size-sm: 13px;
+  --font-size-base: 16px;
+  --font-size-lg: 18px;
+  --font-size-xl: 24px;
+  --font-size-2xl: 32px;
+  --font-size-3xl: 48px;
+
+  // Transitions
+  --transition-fast: 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-base: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+
+  // Z-index layers
+  --z-base: 0;
+  --z-dropdown: 100;
+  --z-modal: 200;
+  --z-toast: 300;
+  --z-confetti: 400;
+}

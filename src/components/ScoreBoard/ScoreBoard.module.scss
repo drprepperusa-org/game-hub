@@ -1,0 +1,117 @@
+@import '@/styles/variables.scss';
+
+.scoreboard {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  padding: 4px var(--spacing-sm);
+  border-radius: var(--border-radius-md);
+  transition: background var(--transition-fast);
+  animation: rankChange 0.5s ease-out;
+
+  &.me {
+    background: rgba(108, 99, 255, 0.1);
+  }
+}
+
+.rank {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+  font-weight: 800;
+  width: 24px;
+  text-align: center;
+}
+
+.avatar {
+  font-size: 18px;
+}
+
+.name {
+  font-size: var(--font-size-sm);
+  font-weight: 700;
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: var(--color-text);
+}
+
+.scoreBar {
+  width: 60px;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 2px;
+  overflow: hidden;
+  display: none;
+
+  @media (min-width: 480px) {
+    display: block;
+  }
+}
+
+.scoreBarFill {
+  height: 100%;
+  background: var(--gradient-primary);
+  border-radius: 2px;
+  transition: width var(--transition-base);
+}
+
+.score {
+  font-family: var(--font-display);
+  font-size: 12px;
+  color: var(--color-accent-yellow);
+  min-width: 40px;
+  text-align: right;
+}
+
+// Compact mode
+.compact {
+  display: flex;
+  gap: var(--spacing-md);
+  overflow-x: auto;
+  padding: var(--spacing-xs) 0;
+}
+
+.compactItem {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px var(--spacing-sm);
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: var(--border-radius-md);
+  white-space: nowrap;
+  flex-shrink: 0;
+
+  &.me {
+    background: rgba(108, 99, 255, 0.15);
+    border: 1px solid rgba(108, 99, 255, 0.3);
+  }
+}
+
+.compactRank {
+  font-size: 10px;
+  color: var(--color-text-muted);
+  font-weight: 800;
+}
+
+.compactAvatar {
+  font-size: 14px;
+}
+
+.compactName {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--color-text-secondary);
+}
+
+.compactScore {
+  font-family: var(--font-display);
+  font-size: 11px;
+  color: var(--color-accent-yellow);
+}

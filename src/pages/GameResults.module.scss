@@ -1,0 +1,112 @@
+@import '@/styles/variables.scss';
+
+.container {
+  min-height: 100vh;
+  background: var(--gradient-hero);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: var(--spacing-lg);
+  position: relative;
+  overflow: hidden;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: var(--spacing-xl);
+  animation: fadeIn 0.5s ease-out;
+}
+
+.gameLabel {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: var(--spacing-md);
+}
+
+.winnerAnnounce {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-md);
+  background: linear-gradient(135deg, rgba(255, 215, 0, 0.15), rgba(255, 215, 0, 0.05));
+  border: 2px solid rgba(255, 215, 0, 0.4);
+  border-radius: var(--border-radius-xl);
+  padding: var(--spacing-md) var(--spacing-xl);
+  animation: pop 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.3s both;
+}
+
+.winnerAvatar {
+  font-size: 52px;
+  animation: bounce 1.5s ease-in-out infinite;
+}
+
+.winnerText {
+  display: flex;
+  flex-direction: column;
+}
+
+.winnerName {
+  font-size: var(--font-size-2xl);
+  font-weight: 900;
+  color: var(--color-accent-yellow);
+}
+
+.winnerTitle {
+  font-size: var(--font-size-base);
+  color: var(--color-text-secondary);
+}
+
+.content {
+  width: 100%;
+  max-width: 600px;
+  animation: fadeIn 0.6s ease-out 0.2s both;
+}
+
+.actions {
+  display: flex;
+  gap: var(--spacing-md);
+  margin-top: var(--spacing-xl);
+  flex-wrap: wrap;
+  justify-content: center;
+  animation: fadeIn 0.6s ease-out 0.4s both;
+}
+
+.playAgainBtn {
+  padding: var(--spacing-md) var(--spacing-xl);
+  border-radius: var(--border-radius-lg);
+  font-size: var(--font-size-lg);
+  font-weight: 800;
+  background: var(--gradient-primary);
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  box-shadow: var(--shadow-glow);
+
+  &:hover {
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: var(--shadow-glow), var(--shadow-md);
+  }
+  &:active { transform: scale(0.98); }
+}
+
+.leaveBtn {
+  padding: var(--spacing-md) var(--spacing-xl);
+  border-radius: var(--border-radius-lg);
+  font-size: var(--font-size-lg);
+  font-weight: 800;
+  background: transparent;
+  color: var(--color-text-secondary);
+  border: 2px solid var(--border-color);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+
+  &:hover {
+    color: var(--color-error);
+    border-color: var(--color-error);
+    background: rgba(255, 101, 132, 0.1);
+  }
+}
